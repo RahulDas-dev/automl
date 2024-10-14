@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "automl"
+version = "0.1.0"
+description = ""
+authors = ["RahulDas-dev <r.das699@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+numpy = "^2.1.2"
+pandas = "^2.2.3"
+matplotlib = "^3.9.2"
+scikit-learn = "^1.5.2"
+joblib = "^1.4.2"
+imbalanced-learn = "^0.12.4"
+optuna = "^4.0.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.9.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+pyclean = "^3.0.0"
+ruff = "^0.6.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = [
+    ".ruff_cache",
+    ".git",
+    ".ipynb_checkpoints",
+    ".vscode",
+    "notebooks",
+]
+extend-include = []
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = ["ANN204", "ANN401", "E731", "D", "DTZ005", "BLE001","B008", "CPY001","COM812", "ERA001", "EM101","EM102", "FA","FBT", "G004", "UP", "TRY", "PTH123","ISC001" ]
+select = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
